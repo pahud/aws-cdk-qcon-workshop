@@ -60,5 +60,5 @@ Install Docker Desktop for your [Mac](https://docs.docker.com/docker-for-mac/) o
 
 Lab1 - [Build your 1st Serverless Container App with AWS CDK](./Lab1/)
 
-Lab2 - Build your serverless URL-shortener App with AWS CDK
+Lab2 - [Build your serverless URL-shortener App with AWS CDK](./Lab2/README.md)
 
