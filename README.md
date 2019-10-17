@@ -1,3 +1,5 @@
+![](https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-128-dark.png)
+
 # aws-cdk-qcon-workshop
 
 This workshop walks you through building sample serverless and container apps with AWS CDK.
