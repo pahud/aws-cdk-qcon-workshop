@@ -109,6 +109,17 @@ export class WorkspaceStack extends cdk.Stack {
       cluster,
       taskDefinition
     })
+    
+    // reduce the default deregistration delay timeout from 300 to 30 to accelerate the rolling update
+    svc.targetGroup.setAttribute('deregistration_delay.timeout_seconds', '30')
+    // customize the healthcheck to speed up the ecs rolling update
+    svc.targetGroup.configureHealthCheck({
+      interval: cdk.Duration.seconds(5),
+      healthyHttpCodes: '200',
+      healthyThresholdCount: 2,
+      unhealthyThresholdCount: 3,
+      timeout: cdk.Duration.seconds(4),
+    })
   }
 }
 
